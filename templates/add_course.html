@@ -1,0 +1,25 @@
+{% extends 'skydash.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+   <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img style="min-width:840px;" src="https://img.freepik.com/free-photo/book-laptop-pencil-clock-wooden-table-library-education-learning-concept_1150-16627.jpg?w=740&t=st=1682587429~exp=1682588029~hmac=c48f84316f7fccea439fba3358428655a2a22506198a2c7220768aa230ca0554" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+
+
+
+    <form method="POST" action ="">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type = "submit" value="submit">
+    </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

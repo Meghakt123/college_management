@@ -1,0 +1,31 @@
+{% extends 'skydash.html' %}
+{% block content %}
+<div class="table-responsive">
+<table class="table table-bordered table-secondary">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+      <th scope="col">user name</th>
+      <th scope="col">Contact Number</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in data %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.Name}}</td>
+      <td>{{i.username}}</td>
+      <td>{{i.Contact_Number}}</td>
+      <td>{{i.address}}</td>
+
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+  </div>
+<a href="{% url 'teacher_registration' %}">Add</a>
+{% endblock %}
